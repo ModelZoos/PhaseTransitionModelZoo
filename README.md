@@ -1,6 +1,7 @@
 # Supplemantary Material To Phase Transition Model Zoos
 
-[TODO](): Add overview figure
+[TODO](): Add overview figure   
+
 Dear Reviewers,
 
 In this repository, we provide full code to reproduce the training, evaluation and loss-landscape metrics computation of the model zoos proposed in our submission. We also provide a notebook to reproduce the figures in the paper visualizing the different phases. 
