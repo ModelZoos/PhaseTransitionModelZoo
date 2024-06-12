@@ -9,12 +9,30 @@ In this repository, we provide full code to reproduce thetraining, evaluation an
 
 ![Example for phase transitions and loss landscape metrics in our model zoo.](./assets/phases_presentation_cifar100.png)
 
-This repository contains three code sections: `src`, `scripts` and a notebook `visualize_phases.ipynb` to visualize and explore the dataset.  
+This repository contains three code sections:
+```
+- src
+- scripts
+- visualize_phases.ipynb
+```
+
+ `src`, `scripts` and a notebook `visualize_phases.ipynb` to visualize and explore the dataset. We expand on these three sections in the following.
 
 ## Code
  
 ### Model Defintions
+
 In `src`, we collect model definitions, trainer code, loss-landscape and model averaging code. Model definitions and runners are in `src/ptmz/models/`. Here, `def_resnet_width.py` contains the ResNet model class and training steps. `def_NN_experiment.py` contains code to run experiments over grids using [ray.tune](https://docs.ray.io/en/latest/tune/index.html).  
+```
+- src
+    - ptmz
+        - models
+            - ...
+        - loss_landscape
+            - ...
+        - model_averaging
+            - ...
+```
 
 ### Loss Landscape Metrics
 The loss landscape metrics are collected in `src/ptmz/loss_landscape/`. We include code to compute the hessian metrics and ray experiment in `hessian_metric.py` and `hessian_experiment.py`, with dependencies on `src/ptmz/loss_landscape/pyhessian`. The CKA implementation is likewise in `CKA.py` and `CKA_experiment.py` with dependencies on `CKA_utils.py`. Similarly, Bezier mode connectivity is implemented in `curve_fitting.py` and `curve_fitting_experiment.py` with utils in `curves.py`.
@@ -46,6 +64,24 @@ Please note that the dataset format is restricted at this point to facilitate do
 We purposefully leave the dataset relatively raw, since we do not want to restrict use cases. For the camera ready version, we will provide code to make the dataset accessible for the use-cases we can envision. We welcome feedback on how best to present these datasets.
 
 ### Dataset Directory Structure and Information 
-Each of the dataset examples contains 192 models (8x8x3) in one directory per model. each model directory contains the config of that particular model in `params.json` as well as the model performance metrics in `result.json`. We have annotated loss landscape metrics for some epochs in the `result.json`. Further, we have included a small subset of checkpoints per model in their corresponding subdirectories. With the code in this repository, the config and the checkpoints, models can be loaded and used to reproduce our results exactly. Examples for that can be found in the notebook.
+Each of the dataset examples contains 192 models (8x8x3) in one directory per model. As outlined below, each model directory contains the config of that particular model in `params.json` as well as the model performance metrics in `result.json`. We have annotated loss landscape metrics for some epochs in the `result.json`. Further, we have included a small subset of checkpoints per model in their corresponding subdirectories. With the code in this repository, the config and the checkpoints, models can be loaded and used to reproduce our results exactly. Examples for that can be found in the notebook.
+
+```
+- data
+    - cifar_10-ResNet18_subset
+        - model 1
+            - checkpoint_000XYZ
+            - config.json
+            - result.json
+            - ...
+        - ...
+    - cifar_100-ResNet50_subset
+        - model 1
+            - checkpoint_000XYZ
+            - config.json
+            - result.json
+            - ...
+        - ...
+```
 
 #
