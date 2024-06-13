@@ -42,8 +42,6 @@ The loss landscape metrics are collected in `src/ptmz/loss_landscape/`. We inclu
 ### Phase Identification In Applications - Model Averaging
 Code to evaluate phases in model averaging is in `src/ptmz/model_averaging/`. Averaging one model over different training epochs is implemented in `average_model_epochs.py` and `average_model_epochs_experiment.py`. Averaging over different seeds is in `average_models.py` and `average_model_experiment.py`, with additional model aligenment in `align_models.py`.
 
-[TODO](): should we discuss the pyhessian stuff somewhere / give reference to where that comes from?
-
 ## Experiment replication
 We include all code to reproduce our experiments and re-train or extend our model zoos, as well as to re-compute the loss-landscape metrics.
 The experiment runner files can be fonud in `scripts` with one sub-directory per zoo. Within each subdirectory, you will find experiment runners to train the zoos, e.g.,`train_zoo_cifar10_resnet18_wide.py`, but also experiment runners to compute the loss landscape metrics and model averaging experiments.  
