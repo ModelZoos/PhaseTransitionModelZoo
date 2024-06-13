@@ -60,10 +60,6 @@ This repository also contains code to reproduce figures from the submission. The
 ## Dataset Samples
 Two zoo samples, one ResNet18 and ResNet50 zoo can be found [here](https://drive.proton.me/urls/TG5WC7B43C#bkNzPBKq1EWx). Please download the `zip` files, and extract them to `data`.
 
-<!-- To download them, run   
-> download_data.sh  
-
-This will download and extract two sample model zoos with a subset of epochs and loss landscape metrics. The sample datasets are stored in `./data/`.  -->
 Please note that the dataset format is restricted at this point to facilitate double blind reviewing. 
 We purposefully leave the dataset relatively raw, since we do not want to restrict use cases. For the camera ready version, we will provide code to make the dataset accessible for the use-cases we can envision. We welcome feedback on how best to present these datasets.
 
