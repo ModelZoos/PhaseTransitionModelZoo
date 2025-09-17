@@ -14,7 +14,15 @@ Pending publication, we kindly refer the reader to the workshop version of our w
 
 ## Dataset Access
 
-We are currently in the process of making the dataset as a whole available. In thbe meantime, two zoo samples, one ResNet18 and ResNet50 zoo can be found [here](https://drive.proton.me/urls/V2E66KY0JM#Pq5M06URN4EN). Please download the `zip` files, and extract them to `data`.
+[![CC BY 4.0][cc-by-shield]][cc-by]
+
+The **Phase Transitions Model Zoo** dataset is licensed under a
+[Creative Commons Attribution 4.0 International License][cc-by].
+
+[cc-by]: http://creativecommons.org/licenses/by/4.0/
+[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
+
+We are currently in the process of making the dataset as a whole available. In the meantime, two zoo samples, one ResNet18 and ResNet50 zoo can be found [here](https://drive.proton.me/urls/V2E66KY0JM#Pq5M06URN4EN). Please download the `zip` files, and extract them to `data`.
 
 ### Dataset Directory Structure and Information
 
