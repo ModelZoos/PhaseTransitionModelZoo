@@ -58,7 +58,7 @@ Each of the dataset samples contains 192 models (8x8x3) in one directory per mod
 
 ### Dataset Contents
 
-Our dataset contains 12 model zoos covering all phases. The zoos include computer vision, natural language and scientific machine learning (SciML) models, with different architectures of different sizes and are trained on various datasets. It contains a total of $\sim$2.5k unique neural network models between 11K and 900M parameters and more than 60k checkpoints. We provide more comprehensive details about the zoos and the configurations used to generate them in our [paper](#paper). Below, we provide a summary of the contents of the dataset:
+Our dataset contains 12 model zoos covering all phases. The zoos include computer vision, natural language and scientific machine learning (SciML) models, with different architectures of different sizes and are trained on various datasets. It contains a total of $\sim2\,500$ unique neural network models between 11K and 900M parameters and more than 60k checkpoints. We provide more comprehensive details about the zoos and the configurations used to generate them in our [paper](#paper). Below, we provide a summary of the contents of the dataset:
 
 Architecture | Dataset       | # models | Load-like hyperparameter | Temperature-like hyperparameter
 |------------|---------------|----------|--------------------------|--------------------------------|
