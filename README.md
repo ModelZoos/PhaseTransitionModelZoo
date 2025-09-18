@@ -10,7 +10,17 @@ Pending publication, we kindly refer the reader to the workshop version of our w
 
 ## Phase Transitions in Neural Networks
 
+Yang *et al.* [[1](#references)] have developped a taxonomy of neural network (NN) loss landscapes, inspired by statistical mechanics, to define distinct phases and phase transitions in NN parameter space. These phases, characterized by qualitative changes in generalization performance, are influenced by hyperparameters such as model size, data noise, and training iterations, analogous to physical systems. This framework categorizes NN behavior using two axes: temperature and load. "Temperature" reflects training noisiness, while "load" denotes the data-to-model size ratio. The loss landscape is analyzed using metrics such as training loss, local sharpness (via Hessian-based measures), global niceness (mode connectivity), and representation similarity (CKA). These metrics reveal phases in the hyperparameter space, each defined by unique combinations of training loss, sharpness, connectivity, and representation consistency, providing insights into model generalization and optimization dynamics. We invite the interested reader to find more detailed descriptions of the phases in our [paper](#paper) or directly the work of Yang *et al.* [[1](#references)].
+
 ![Example for phase transitions and loss landscape metrics in our model zoo.](./assets/phases_presentation_cifar100.png)
+
+   Phase                | Train Loss | Hessian Metrics | Mode Connectivity | CKA Similarity |
+ |----------------------|------------|-----------------|-------------------|----------------|
+ | **Phase I** (underfitted & undersized) | High         | Large (rugged basin) | Negative (barrier)       | —              |
+ | **Phase II** (underfitted)             | High         | Large               | Positive                  | —              |
+ | **Phase III** (undersized)             | Small        | Small (smooth basin) | Negative                  | —              |
+ | **Phase IV-A** (overfitted)            | Small        | Small               | Near-zero   (no barrier)               | Small (dissimilar)          |
+ | **Phase IV-B** (generalizing)         | Small        | Small               | Near-zero    | Large (similar)         |
 
 ## Dataset Access
 
@@ -26,7 +36,7 @@ We are currently in the process of making the dataset as a whole available. In t
 
 ### Dataset Directory Structure and Information
 
-Each of the dataset examples contains 192 models (8x8x3) in one directory per model. As outlined below, each model directory contains the config of that particular model in `params.json` as well as the model performance metrics in `result.json`. We have annotated loss landscape metrics for some epochs in the `result.json`. Further, we have included a small subset of checkpoints per model in their corresponding subdirectories. With the code in this repository, the config and the checkpoints, models can be loaded and used to reproduce our results exactly. Examples for that can be found in the notebook.
+Each of the dataset samples contains 192 models (8x8x3) in one directory per model. As outlined below, each model directory contains the config of that particular model in `params.json` as well as the model performance metrics in `result.json`. We have annotated loss landscape metrics for some epochs in the `result.json`. Further, we have included a small subset of checkpoints per model in their corresponding subdirectories. With the code in this repository, the config and the checkpoints, models can be loaded and used to reproduce our results exactly. Examples for that can be found in the notebook.
 
 ```
 - data
@@ -93,3 +103,11 @@ This will configure the experiment space and run all experiments on the temperat
 This repository also contains code to reproduce figures from the submission. The jupyter notebook `visalize_phases.ipynb` contains code to download dataset samples, extract the performance and loss landscape metrics, and visualize them on the temperature-load surface like the figure below. Within the notebook, we also give examples how to instantiate the models and load checkpoints. 
 
 ![Phase transitions in performance, loss landscape metrics and downstream tasks in our model zoo.](./assets/phase_plot_r18_c10_v2.png)
+
+## References
+
+[1] Yang, Y., Hodgkinson, L., Theisen, R., Zou, J., Gonzalez, J. E., Ramchandran, K., & Mahoney, M. W. (2021). Taxonomizing local versus global structure in neural network loss landscapes. *Advances in Neural Information Processing Systems, 34*, 18722-18733. ([link](https://proceedings.neurips.cc/paper/2021/hash/9b72e31dac81715466cd580a448cf823-Abstract.html))
+
+## See also
+
+* The original [model zoos](https://www.modelzoos.cc) dataset, which contains other zoos of Deep Learning models, mostly CNNs and ResNet-18 trained on computer vision classification tasks.
