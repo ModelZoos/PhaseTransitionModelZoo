@@ -72,7 +72,7 @@ ResNet-50    | CIFAR-100     | 192      | Model width              | Batch size
 ResNet-50    | TinyImagenet  | 192      | Model width              | Batch size
 ViT          | CIFAR-10      | 147      | Model width              | Batch size
 ViT          | CIFAR-100     | 147      | Model width              | Batch size
-GPT-2        | OpenWebText   | 192      | `model_dim`              | Batch size
+GPT-2        | OpenWebText   | 264      | `model_dim`              | Batch size
 MLP (PINN)   | 1D Convection | 700      | Convection coeff. `beta` | Learning rate
 
 ## Code
