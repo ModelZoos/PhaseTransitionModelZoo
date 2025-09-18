@@ -58,7 +58,22 @@ Each of the dataset samples contains 192 models (8x8x3) in one directory per mod
 
 ### Dataset Contents
 
-TODO
+Our dataset contains 12 model zoos covering all phases. The zoos include computer vision, natural language and scientific machine learning (SciML) models, with different architectures of different sizes and are trained on various datasets. It contains a total of $\sim$2.5k unique neural network models between 11K and 900M parameters and more than 60k checkpoints. We provide more comprehensive details about the zoos and the configurations used to generate them in our [paper](#paper). Below, we provide a summary of the contents of the dataset:
+
+Architecture | Dataset       | # models | Load-like hyperparameter | Temperature-like hyperparameter
+|------------|---------------|----------|--------------------------|--------------------------------|
+ResNet-18    | SVHN          | 192      | Model width              | Batch size
+ResNet-18    | CIFAR-10      | 192      | Model width              | Batch size
+ResNet-18    | CIFAR-100     | 192      | Model width              | Batch size
+ResNet-18    | TinyImagenet  | 192      | Model width              | Batch size
+ResNet-50    | SVHN          | 192      | Model width              | Batch size
+ResNet-50    | CIFAR-10      | 192      | Model width              | Batch size
+ResNet-50    | CIFAR-100     | 192      | Model width              | Batch size
+ResNet-50    | TinyImagenet  | 192      | Model width              | Batch size
+ViT          | CIFAR-10      | 147      | Model width              | Batch size
+ViT          | CIFAR-100     | 147      | Model width              | Batch size
+GPT-2        | OpenWebText   | 192      | `model_dim`              | Batch size
+MLP (PINN)   | 1D Convection | 700      | Convection coeff. `beta` | Learning rate
 
 ## Code
 
