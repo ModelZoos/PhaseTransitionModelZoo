@@ -6,7 +6,23 @@ This repository contains the code and resources needed to access and work with t
 
 ## Paper
 
-Pending publication, we kindly refer the reader to the workshop version of our work, available as a pre-print on [arXiv](https://arxiv.org/abs/2504.18072).
+[![arXiv](https://img.shields.io/badge/arXiv-2504.18072-b31b1b.svg)](https://arxiv.org/abs/2504.18072)
+[![OpenReview](https://img.shields.io/badge/OpenReview-zJRWvNpdIr-8c1b13.svg)](https://openreview.net/forum?id=zJRWvNpdIr)
+
+Our paper has been published in the Journal of Data-centric Machine Learning Research [DMLR](https://data.mlr.press/volumes/02.html).
+
+```bibtex
+@article{
+  sch{\"u}rholt2025a,
+  title={A Model Zoo on Phase Transitions in Neural Networks},
+  author={Konstantin Sch{\"u}rholt and L{\'e}o Meynent and Yefan Zhou and Haiquan Lu and Yaoqing Yang and Damian Borth},
+  journal={Journal of Data-centric Machine Learning Research},
+  issn={XXXX-XXXX},
+  year={2025},
+  url={https://openreview.net/forum?id=zJRWvNpdIr}
+}
+
+```
 
 ## Phase Transitions in Neural Networks
 
@@ -74,6 +90,8 @@ ViT          | CIFAR-10      | 147      | Model width              | Batch size
 ViT          | CIFAR-100     | 147      | Model width              | Batch size
 GPT-2        | OpenWebText   | 264      | `model_dim`              | Batch size
 MLP (PINN)   | 1D Convection | 700      | Convection coeff. `beta` | Learning rate
+
+We provide a summary of every model in the zoo, for every epoch, in the `summary_metrics` directory.
 
 ## Code
 
